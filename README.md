@@ -167,7 +167,7 @@ ADDCOLUMNS(
 |---|---|---|
 | 1 | **Loans account for ~₹2.5bn of ₹3.47bn (~72%)**; Insurance ~₹0.5bn, Money Transfer ~₹0.4bn, Recharge Bills ~₹0.1bn | Value is concentrated in one service. A separate average-ticket-size view would show whether that is volume or large tickets |
 | 2 | **Success rate is 96.00%**, leaving 4% failed or pending | Failure reasons are merged into Pending (see limitations), so the failure breakdown is not usable |
-| 3 | **Gen X (37.4%) and Millennials (37.3%) make up ~75% of users**; Gen Z 20.74%, Boomers 4.56% | Share of users only; value per segment is shown in the tooltip |
+| 3 | **Gen X (37.4%) and Millennials (37.3%) make up ~75% of users**; Gen Z 20.74%, Boomers 4.56% | Share of users only. The segments span unequal age ranges (Gen Z 9 years, Millennials and Gen X 16 each, Boomers 2), so the split mostly reflects bucket width, not behavior |
 | 4 | **Weekdays carry 71.6% of transactions, which equals weekdays' share of 2024's calendar** (262 of 366 days) | Daily volume is roughly flat. This is not a weekday-heavy pattern, it is calendar math |
 | 5 | **Top 5 users hold ₹1.2M to ₹1.8M each, about ₹7.1M combined (~0.2% of total value)** | No whale concentration, so a top-user retention program has limited leverage |
 
@@ -178,6 +178,7 @@ ADDCOLUMNS(
 - **MoM cards are misleading with "All" months selected.** A year-long total is compared against the same window shifted back one month, which only partially exists in the data, so the figure (about 9%) reflects window size, not growth. Selecting a single month gives a real MoM value.
 - **Failure reasons merged into Pending.** `Wrong Pin`, `Server Error`, and `Insufficient Amount` are failures, not pending states. A proper `Failed` category would make the success-rate analysis useful.
 - **Weekday vs weekend is not normalized.** Raw share mirrors the calendar. Average transactions per day by day type would be the correct metric.
+- **Age segments are unequal-width buckets.** Comparing their user shares without adjusting for bucket width overstates Gen X and Millennials.
 - **Unique Users MoM card omitted** in the tutorial because of a relationship issue.
 - **Synthetic data.** Names and values are generated, so findings illustrate technique, not real user behavior.
 - **Single dashboard page** with no drill-through or bookmarks.
